@@ -1,3 +1,16 @@
-<p>田中様よろしいですね？</p>
-<%= link_to("はい", "/cancel/id") %>
-<%= link_to("いいえ", "/cancel") %>
+
+<div class="main users-index">
+  <div class="container">
+    <h1 class="users-heading"><%=@current_user.name%>さん</h1>
+
+      <div class="users-index-item">
+
+        <div class="user-right">
+          <%= "#{@hour.content}の取り消しでよろしいですね？" %>
+          <%= link_to("はい", "/cancel/id") %>
+          <%= link_to("いいえ", "/cancel") %>
+        </div>
+      </div>
+
+  </div>
+</div>

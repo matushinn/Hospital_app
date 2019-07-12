@@ -3,18 +3,17 @@
     <div class="form-heading">検索</div>
     <div class="form users-form">
       <div class="form-body">
-        <!--
         <% if @error_message %>
           <div class="form-error">
             <%= @error_message %>
           </div>
         <% end %>
--->
+
         <%= form_tag("/search/search_create") do %>
           <p>お名前</p>
-          <input name="name">
+          <input name="name"　value="<%= @name %>">
           <p>生年月日</p>
-          <input name="date">
+          <input name="birthday" value="<%= @birthday %>">
 
           <input type="submit" value="次へ">
         <% end %>

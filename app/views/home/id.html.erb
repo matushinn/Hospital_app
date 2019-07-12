@@ -1,3 +1,6 @@
-<h1>これでよろしいですね</h1>
-<%= link_to("はい", "/") %>
-<%= link_to("いいえ", "/create/create") %>
+<div class="main">
+  <h1><%= @hour.content %>でよろしいですね</h1>
+  <%= link_to("はい", "/logout",{method:"post"}) %>
+  <%= link_to("いいえ", "/create/create") %>
+
+</div>

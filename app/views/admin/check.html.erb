@@ -1,2 +1,20 @@
-<h1>カレンダー</h1>
-<%= link_to("戻る", "/content") %>
+
+<div class="main posts-index">
+  <div class="container">
+    <%= link_to("戻る", "/content") %>
+    <% @hours.each do |hour| %>
+      <div class="users-index-item">
+        <div class="user-left">
+
+          <%= hour.check+hour.content %>
+
+        </div>
+        <div class="user-right">
+
+          <%= hour.user_name %>
+
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

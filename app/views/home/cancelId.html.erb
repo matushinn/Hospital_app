@@ -1,3 +1,6 @@
-<h3>予約取り消しでよろしいですね？</h3>
-<%= link_to("戻る", "/cancel/select") %>
-<%= link_to("次へ", "/") %>
+<div class="main">
+  <h1><%= @hour.content %>の取り消しで本当によろしいですね？</h1>
+  <%= link_to("はい", "/logout",{method:"post"}) %>
+  <%= link_to("いいえ", "/cancel/select") %>
+
+</div>

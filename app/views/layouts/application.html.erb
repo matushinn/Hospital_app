@@ -10,6 +10,34 @@
   </head>
 
   <body>
+    <header>
+      <div class="header-logo">
+        <h3>予約管理システム</h3>
+      </div>
+      <ul class="header-menus">
+
+        <% if @current_user %>
+        <li>
+          <%=@current_user.name%>さん
+        </li>
+        <li>
+          <%= link_to("TOPへ", "/logout",{method:"post"}) %>
+        </li>
+        <% else %>
+         <li>
+           <%= link_to("管理者ログイン", "/login") %>
+         </li>
+         <li>
+           <%= link_to("予約取り消し", "/cancel") %>
+         </li>
+         <li>
+           <%= link_to("TOPへ", "/") %>
+         </li>
+        <% end %>
+
+
+      </ul>
+    </header>
     <% if flash[:notice] %>
       <div class="flash">
         <%= flash[:notice] %>

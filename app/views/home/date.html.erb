@@ -1,17 +1,21 @@
-
-<div class="main posts-index">
+<div class="main users-new">
   <div class="container">
+    <div class="form-heading">日付</div>
+    <div class="form users-form">
+      <div class="form-body">
+        <!--
+        <% if @error_message %>
+          <div class="form-error">
+            <%= @error_message %>
+          </div>
+        <% end %>
+-->
+        <%= form_tag("/create/date_create") do %>
+          <p>予約日を入力してください(例：7月11日 => 0711)</p>
+          <input name="rese_date">
 
-      <div class="form posts-index-item">
-
-        <div class="form-heading post-right">
-          <h1>カレンダー</h1>
-          <br>
-          <%= link_to("次へ", "/create/hour") %>
-          <br>
-          <%= link_to("戻る", "/create") %>
-        </div>
+          <input type="submit" value="次へ">
+        <% end %>
       </div>
-
+    </div>
   </div>
-</div>
