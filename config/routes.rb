@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :articles
   get "login" => "admin#login"
   post "login/create" => "admin#login_create"
   get "content" => "admin#content"
